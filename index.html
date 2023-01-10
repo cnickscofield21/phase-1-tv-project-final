@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Couchtime</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="./assets/favicon.png">
+        <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/bootstrap-icons.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/styles.css">
+        <script defer="" src="./js/bootstrap.bundle.min.js"></script>
+        <script defer="" src="./js/index.js"></script>
+    </head>
+    <body data-bs-theme="">
+        <div class="container-fluid">
+            <div class="row flex-nowrap">
+                <div class="row flex-nowrap">
+                    <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                        <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                            <h3><span class="ms-1 d-none d-sm-inline">Couchtime</span></h3>
+                            <hr>
+                            <ul class="nav flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                                <li class="nav-item">
+                                    <a href="#Search" class="nav-link align-middle px-0 text-white">
+                                        <i class="fs-4 bi-search"></i> <span class="ms-1 d-none d-sm-inline">Search</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#Home" class="nav-link align-middle px-0 text-white">
+                                        <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#Watchlist" class="nav-link px-0 align-middle text-white">
+                                        <i class="fs-4 bi-bookmarks"></i> <span class="ms-1 d-none d-sm-inline">Watchlist</span>
+                                    </a>
+                                </li>
+                                <!-- FIXME: save for later version
+                                    <li class="nav-item">
+                                    <a href="#Collections" class="nav-link px-0 align-middle text-white">
+                                        <i class="fs-4 bi-journals"></i> <span class="ms-1 d-none d-sm-inline">Collections</span>
+                                    </a>
+                                </li>
+                                -->
+                            </ul>
+                            <hr>
+                            <div class="pb-4">
+                                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start position-sticky bottom-10" id="settings-menu">
+                                    <li class="nav-item">
+                                        <a href="#Settings" class="nav-link align-middle px-0 text-white">
+                                            <i class="fs-4 bi-gear"></i> <span class="ms-1 d-none d-sm-inline">Settings</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                <main id="main-content" class="col py-3">
+                    <section id="Search-Section" class="content-section d-none">
+                        <div class="row">
+                            <div class="col">
+                                <h2>Search</h2>
+                                <h6>Search from 1,000s of programs</h6>
+                            </div>
+                        </div>
+                        <hr>
+                        <form class="form" id="search-form">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="input-group mb-3">
+                                        <input id="search-form-input" type="search" class="form-control" placeholder="Enter Show Title" aria-label="Enter Show Title" aria-describedby="basic-addon1">
+                                        <button class="btn btn-outline-secondary" type="submit" id="search-form-button"><i class="fs-4 bi-search"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="search-results" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"></div>
+                    </section>
+                    <section id="Home-Section" class="content-section">
+                        <div class="row">
+                            <div class="col">
+                                <h2>Home</h2>
+                                <h6>Upcoming Programming</h6>
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="home-results" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"><div class="col"><div class="card h-100" style="width: 15rem;"><img class="card-img-top" src="https://static.tvmaze.com/uploads/images/medium_portrait/409/1024249.jpg" alt="RAW Talk Poster"><div class="card-body"><h5 class="card-title">RAW Talk</h5><h6 class="card-subtitle mb-2 text-muted">Raw Talk 146 (S:7 E:2)</h6><h6 class="card-subtitle mb-2 text-muted text-small">WWE Network</h6><div class="clearfix pt-2"><button class="btn btn-sm btn-secondary float-start" type="button" data-episode-id="2461294"><i class="bi-eye"></i> More...</button><button class="btn btn-sm btn-warning float-end" type="button"><i class="bi-bookmark-plus"></i> Watchlist</button></div></div></div></div><div class="col"><div class="card h-100" style="width: 15rem;"><img class="card-img-top" src="https://static.tvmaze.com/uploads/images/medium_portrait/276/690655.jpg" alt="Game Changer Poster"><div class="card-body"><h5 class="card-title">Game Changer</h5><h6 class="card-subtitle mb-2 text-muted">TBA (S:5 E:5)</h6><h6 class="card-subtitle mb-2 text-muted text-small">Collegehumor</h6><div class="clearfix pt-2"><button class="btn btn-sm btn-secondary float-start" type="button" data-episode-id="2432949"><i class="bi-eye"></i> More...</button><button class="btn btn-sm btn-warning float-end" type="button"><i class="bi-bookmark-plus"></i> Watchlist</button></div></div></div></div><div class="col"><div class="card h-100" style="width: 15rem;"><img class="card-img-top" src="https://static.tvmaze.com/uploads/images/medium_portrait/434/1085708.jpg" alt="Koala Man Poster"><div class="card-body"><h5 class="card-title">Koala Man</h5><h6 class="card-subtitle mb-2 text-muted">Bin Day (S:1 E:1)</h6><h6 class="card-subtitle mb-2 text-muted text-small">Hulu</h6><div class="clearfix pt-2"><button class="btn btn-sm btn-secondary float-start" type="button" data-episode-id="2445211"><i class="bi-eye"></i> More...</button><button class="btn btn-sm btn-warning float-end" type="button"><i class="bi-bookmark-plus"></i> Watchlist</button></div></div></div></div><div class="col"><div class="card h-100" style="width: 15rem;"><img class="card-img-top" src="https://static.tvmaze.com/uploads/images/medium_portrait/434/1085708.jpg" alt="Koala Man Poster"><div class="card-body"><h5 class="card-title">Koala Man</h5><h6 class="card-subtitle mb-2 text-muted">Deep Pockets (S:1 E:2)</h6><h6 class="card-subtitle mb-2 text-muted text-small">Hulu</h6><div class="clearfix pt-2"><button class="btn btn-sm btn-secondary float-start" type="button" data-episode-id="2465174"><i class="bi-eye"></i> More...</button><button class="btn btn-sm btn-warning float-end" type="button"><i class="bi-bookmark-plus"></i> Watchlist</button></div></div></div></div><div class="col"><div class="card h-100" style="width: 15rem;"><img class="card-img-top" src="https://static.tvmaze.com/uploads/images/medium_portrait/434/1085708.jpg" alt="Koala Man Poster"><div class="card-body"><h5 class="card-title">Koala Man</h5><h6 class="card-subtitle mb-2 text-muted">The Red Hot Rule (S:1 E:3)</h6><h6 class="card-subtitle mb-2 text-muted text-small">Hulu</h6><div class="clearfix pt-2"><button class="btn btn-sm btn-secondary float-start" type="button" data-episode-id="2465177"><i class="bi-eye"></i> More...</button><button class="btn btn-sm btn-warning float-end" type="button"><i class="bi-bookmark-plus"></i> Watchlist</button></div></div></div></div><div class="col"><div class="card h-100" style="width: 15rem;"><img class="card-img-top" src="https://static.tvmaze.com/uploads/images/medium_portrait/434/1085708.jpg" alt="Koala Man Poster"><div class="card-body"><h5 class="card-title">Koala Man</h5><h6 class="card-subtitle mb-2 text-muted">The Great One (S:1 E:4)</h6><h6 class="card-subtitle mb-2 text-muted text-small">Hulu</h6><div class="clearfix pt-2"><button class="btn btn-sm btn-secondary float-start" type="button" data-episode-id="2465183"><i class="bi-eye"></i> More...</button><button class="btn btn-sm btn-warning float-end" type="button"><i class="bi-bookmark-plus"></i> Watchlist</button></div></div></div></div><div class="col"><div class="card h-100" style="width: 15rem;"><img class="card-img-top" src="https://static.tvmaze.com/uploads/images/medium_portrait/434/1085708.jpg" alt="Koala Man Poster"><div class="card-body"><h5 class="card-title">Koala Man</h5><h6 class="card-subtitle mb-2 text-muted">Ode To A Koala Bear (S:1 E:5)</h6><h6 class="card-subtitle mb-2 text-muted text-small">Hulu</h6><div class="clearfix pt-2"><button class="btn btn-sm btn-secondary float-start" type="button" data-episode-id="2465184"><i class="bi-eye"></i> More...</button><button class="btn btn-sm btn-warning float-end" type="button"><i class="bi-bookmark-plus"></i> Watchlist</button></div></div></div></div><div class="col"><div class="card h-100" style="width: 15rem;"><img class="card-img-top" src="https://static.tvmaze.com/uploads/images/medium_portrait/434/1085708.jpg" alt="Koala Man Poster"><div class="card-body"><h5 class="card-title">Koala Man</h5><h6 class="card-subtitle mb-2 text-muted">The Handies (S:1 E:6)</h6><h6 class="card-subtitle mb-2 text-muted text-small">Hulu</h6><div class="clearfix pt-2"><button class="btn btn-sm btn-secondary float-start" type="button" data-episode-id="2465185"><i class="bi-eye"></i> More...</button><button class="btn btn-sm btn-warning float-end" type="button"><i class="bi-bookmark-plus"></i> Watchlist</button></div></div></div></div><div class="col"><div class="card h-100" style="width: 15rem;"><img class="card-img-top" src="https://static.tvmaze.com/uploads/images/medium_portrait/434/1085708.jpg" alt="Koala Man Poster"><div class="card-body"><h5 class="card-title">Koala Man</h5><h6 class="card-subtitle mb-2 text-muted">Emu War II (S:1 E:7)</h6><h6 class="card-subtitle mb-2 text-muted text-small">Hulu</h6><div class="clearfix pt-2"><button class="btn btn-sm btn-secondary float-start" type="button" data-episode-id="2465186"><i class="bi-eye"></i> More...</button><button class="btn btn-sm btn-warning float-end" type="button"><i class="bi-bookmark-plus"></i> Watchlist</button></div></div></div></div><div class="col"><div class="card h-100" style="width: 15rem;"><img class="card-img-top" src="https://static.tvmaze.com/uploads/images/medium_portrait/434/1085708.jpg" alt="Koala Man Poster"><div class="card-body"><h5 class="card-title">Koala Man</h5><h6 class="card-subtitle mb-2 text-muted">Hot Christmas (S:1 E:8)</h6><h6 class="card-subtitle mb-2 text-muted text-small">Hulu</h6><div class="clearfix pt-2"><button class="btn btn-sm btn-secondary float-start" type="button" data-episode-id="2465187"><i class="bi-eye"></i> More...</button><button class="btn btn-sm btn-warning float-end" type="button"><i class="bi-bookmark-plus"></i> Watchlist</button></div></div></div></div><div class="col"><div class="card h-100" style="width: 15rem;"><img class="card-img-top" src="https://static.tvmaze.com/uploads/images/medium_portrait/440/1100846.jpg" alt="Baking It Poster"><div class="card-body"><h5 class="card-title">Baking It</h5><h6 class="card-subtitle mb-2 text-muted">TBA (S:2 E:6)</h6><h6 class="card-subtitle mb-2 text-muted text-small">Peacock</h6><div class="clearfix pt-2"><button class="btn btn-sm btn-secondary float-start" type="button" data-episode-id="2420253"><i class="bi-eye"></i> More...</button><button class="btn btn-sm btn-warning float-end" type="button"><i class="bi-bookmark-plus"></i> Watchlist</button></div></div></div></div><div class="col"><div class="card h-100" style="width: 15rem;"><img class="card-img-top" src="https://static.tvmaze.com/uploads/images/medium_portrait/87/218576.jpg" alt="Days of Our Lives Poster"><div class="card-body"><h5 class="card-title">Days of Our Lives</h5><h6 class="card-subtitle mb-2 text-muted">Ep. #14504 (S:2023 E:6)</h6><h6 class="card-subtitle mb-2 text-muted text-small">Peacock</h6><div class="clearfix pt-2"><button class="btn btn-sm btn-secondary float-start" type="button" data-episode-id="2459887"><i class="bi-eye"></i> More...</button><button class="btn btn-sm btn-warning float-end" type="button"><i class="bi-bookmark-plus"></i> Watchlist</button></div></div></div></div><div class="col"><div class="card h-100" style="width: 15rem;"><img class="card-img-top" src="https://static.tvmaze.com/uploads/images/medium_portrait/423/1057954.jpg" alt="Juniors Poster"><div class="card-body"><h5 class="card-title">Juniors</h5><h6 class="card-subtitle mb-2 text-muted">TBA (S:1 E:11)</h6><h6 class="card-subtitle mb-2 text-muted text-small">Brat</h6><div class="clearfix pt-2"><button class="btn btn-sm btn-secondary float-start" type="button" data-episode-id="2438898"><i class="bi-eye"></i> More...</button><button class="btn btn-sm btn-warning float-end" type="button"><i class="bi-bookmark-plus"></i> Watchlist</button></div></div></div></div><div class="col"><div class="card h-100" style="width: 15rem;"><img class="card-img-top" src="https://static.tvmaze.com/uploads/images/medium_portrait/357/892591.jpg" alt="WWE Monday Night RAW Poster"><div class="card-body"><h5 class="card-title">WWE Monday Night RAW</h5><h6 class="card-subtitle mb-2 text-muted">#1546 - Legacy Arena in Birmingham, AL (S:30 E:2)</h6><h6 class="card-subtitle mb-2 text-muted text-small">WWE Network</h6><div class="clearfix pt-2"><button class="btn btn-sm btn-secondary float-start" type="button" data-episode-id="2430183"><i class="bi-eye"></i> More...</button><button class="btn btn-sm btn-warning float-end" type="button"><i class="bi-bookmark-plus"></i> Watchlist</button></div></div></div></div><div class="col"><div class="card h-100" style="width: 15rem;"><img class="card-img-top" src="https://static.tvmaze.com/uploads/images/medium_portrait/296/741558.jpg" alt="Maine Cabin Masters Poster"><div class="card-body"><h5 class="card-title">Maine Cabin Masters</h5><h6 class="card-subtitle mb-2 text-muted">I Get By With the Help of Froggy Friends (S:8 E:8)</h6><h6 class="card-subtitle mb-2 text-muted text-small">Magnolia Network</h6><div class="clearfix pt-2"><button class="btn btn-sm btn-secondary float-start" type="button" data-episode-id="2461556"><i class="bi-eye"></i> More...</button><button class="btn btn-sm btn-warning float-end" type="button"><i class="bi-bookmark-plus"></i> Watchlist</button></div></div></div></div><div class="col"><div class="card h-100" style="width: 15rem;"><img class="card-img-top" src="https://static.tvmaze.com/uploads/images/medium_portrait/437/1092773.jpg" alt="The Chosen Poster"><div class="card-body"><h5 class="card-title">The Chosen</h5><h6 class="card-subtitle mb-2 text-muted">Clean, Part 2 (S:3 E:5)</h6><h6 class="card-subtitle mb-2 text-muted text-small">VidAngel</h6><div class="clearfix pt-2"><button class="btn btn-sm btn-secondary float-start" type="button" data-episode-id="2447236"><i class="bi-eye"></i> More...</button><button class="btn btn-sm btn-warning float-end" type="button"><i class="bi-bookmark-plus"></i> Watchlist</button></div></div></div></div></div>
+                    </section>
+                    <section id="Watchlist-Section" class="content-section d-none">
+                        <div class="row">
+                            <div class="col">
+                                <h2>Watchlist</h2>
+                                <h6>All your favorite programming</h6>
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="watchlist-results" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"></div>
+                    </section>
+                    <section id="Show-Details-Section" class="content-section d-none">
+                        <div class="row">
+                            <div class="col">
+                                <h2>Show Details</h2>
+                                <h6>&nbsp;</h6>
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="show-details-results" class="row gx-4 gx-lg-5 align-items-top">
+                            <div class="col-md-3">
+                                <img id="show-details-image" class="card-img-top mb-5 mb-md-0" src="" alt="">
+                            </div>
+                            <div class="col-md-5">
+                                <h1 id="show-details-title" class="display-5 fw-bolder"></h1>
+                                <div class="fs-5 mb-5">
+                                    <span id="show-details-network"></span>
+                                </div>
+                                <div id="show-details-summary"><p></p>
+                                </div>
+                                <div class="d-flex">
+                                    <button id="show-details-addwatchlist" type="button" class="btn btn-sm btn-warning float-end"><i class="bi-bookmark-plus"></i> Watchlist</button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div id="show-details-table" class="col"></div>
+                        </div>
+                    </section>
+                    <section id="Episode-Details-Section" class="content-section d-none">
+                        <div class="row">
+                            <div class="col">
+                                <h2>Episode Details</h2>
+                                <h6>&nbsp;</h6>
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="episode-details-results" class="row gx-4 gx-lg-5 align-items-top">
+                            <div class="col-md-3">
+                                <img id="episode-details-image" class="card-img-top mb-5 mb-md-0" src="" alt="">
+                            </div>
+                            <div class="col-md-5">
+                                <h1 id="episode-details-title" class="display-5 fw-bolder"></h1>
+                                <h6 id="episode-details-se-number"></h6>
+                                <div class="fs-5 mb-5">
+                                    <span id="episode-details-network"></span>
+                                </div>
+                                <div id="episode-details-summary"><p></p>
+                                </div>
+                                <div class="d-flex">
+                                    <button id="episode-details-addwatchlist" type="button" class="btn btn-sm btn-warning float-end"><i class="bi-bookmark-plus"></i> Watchlist</button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div id="episode-details-table" class="col"></div>
+                        </div>
+                    </section>
+                    
+                    <!-- FIXME: save for later version
+                    <section id="Collections-Section" class="content-section d-none">
+                        <div class="row">
+                            <div class="col">
+                                <h2>Collections</h2>
+                                <h6>Build your of collection of programs</h6>
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="collections-results" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"></div>
+                        
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                            <div class="col-md-3">
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="https://static.tvmaze.com/uploads/images/medium_portrait/0/2400.jpg" alt="Show Title Poster">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Breaking Bad</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">AMC (network.name)</h6>
+                                        <div class="clearfix pt-2">
+                                            <button type="button" class="btn btn-sm btn-secondary float-start"><i class="bi-eye"></i> More...</button>
+                                            <button type="button" class="btn btn-sm btn-warning float-end"><i class="bi-bookmark-plus"></i> Watchlist</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    -->
+                    <section id="Settings-Section" class="content-section d-none">
+                        <div class="row">
+                            <div class="col pl-2">
+                                <h2>Settings</h2>
+                                <h6>Optimize your experience</h6>
+                            </div>
+                        </div>
+                        <hr>
+                        <form class="form" id="settings-form">
+                            <div class="row">
+                                <div class="col-sm">
+                                    <h4>Theme</h4>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" id="theme-radio-1" name="couch-theme-radio" value="automatic" checked="">
+                                        <label class="form-check-label" for="theme-radio-1">Automatic (default)</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" id="theme-radio-2" name="couch-theme-radio" value="light">
+                                        <label class="form-check-label" for="theme-radio-2">Light</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" id="theme-radio-3" name="couch-theme-radio" value="dark">
+                                        <label class="form-check-label" for="theme-radio-3">Dark</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <h4>Default Landing Page</h4>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" id="landing-radio-1" name="landing-page-radio" value="Search">
+                                        <label class="form-check-label" for="landing-radio-1">Search</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" id="landing-radio-2" name="landing-page-radio" value="Home" checked="">
+                                        <label class="form-check-label" for="landing-radio-2">Home (default)</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" id="landing-radio-3" name="landing-page-radio" value="Watchlist">
+                                        <label class="form-check-label" for="landing-radio-3">Watchlist</label>
+                                    </div>
+                                    <!-- FIXME: Save for later version
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" id="landing-radio-4" name="landing-page-radio" value="Collections">
+                                        <label class="form-check-label" for="landing-radio-4">Collections</label>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                            <div class="row pt-4">
+                                <div class="col-sm-3">
+                                    <button id="save-settings-button" type="submit" class="btn btn-primary">Save</button>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
